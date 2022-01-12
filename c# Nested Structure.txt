@@ -1,0 +1,32 @@
+using System;
+struct student
+{
+    public String Firstname, Lastname, Address;
+}
+struct Marks
+{
+    public student s;
+    public int math, sci, eng, physics, hindi;
+}
+class nest
+{
+    public static void Main()
+    {
+        Marks m;
+        m.s.Firstname = "Tejaswini";
+        m.s.Lastname = "Hule";
+        m.s.Address = "Mumbai";
+        m.math = 65;
+        m.sci = 78;
+        m.eng = 89;
+        m.physics = 87;
+        m.hindi = 74;
+        Console.WriteLine("First Name = " + m.s.Firstname);
+        Console.WriteLine("Last Name = " + m.s.Lastname);
+        Console.WriteLine("Address=" + m.s.Address);
+        Console.WriteLine("Math Marks = " + m.math);
+        Console.WriteLine("Science = " + m.sci);
+        Console.WriteLine("Physics = " + m.physics);
+        Console.WriteLine("Hindi = " + m.hindi);
+    }
+}
