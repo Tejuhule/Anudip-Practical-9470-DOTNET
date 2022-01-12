@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace RegularExpressions
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Regex r = new Regex(@"^\+?\d{0,2}\-?\d{4,5}\-?\d{5,6}");
+            //class Regex Represents an immutable regular expression.
+
+            string[] str = { "+91-9819685192", "9024657891", "+91-9678-2354", "+91-96789-9865", "+9146537890" };
+            //Input strings for Match valid mobile number.
+
+            foreach (string s in str)
+            {
+                Console.WriteLine("{0} {1} a valid mobile number.", s, r.IsMatch(s) ? "Is" : "Is not");
+            }
+        }
+    }
+}
